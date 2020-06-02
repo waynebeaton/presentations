@@ -4,9 +4,9 @@
 }
 
 body {
-  background-image: url('../images/eclipse_foundation_logo.svg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: left bottom;
+	background-image: url('../images/eclipse_foundation_logo.svg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left bottom;
 	background-size: 25%;
 }
