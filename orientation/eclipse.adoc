@@ -6,19 +6,19 @@
 * Operates independently from any specific vendor; and
 * Uses infrastructure provided by the Eclipse Foundation for core content
 
-== Eclipse Foundation Development Process
+== Development Process
 
-* Defines…
+* Eclipse Foundation Development Process defines…
 ** The Open source rules of engagement
 ** Governance structure and definitions
 ** Relationships and roles
-* Provides a framework for project lifecycle management
+* A framework for project lifecycle management
 ** Releases and reviews
 ** Interaction between projects and the community
 
-== Eclipse Foundation Intellectual Property Policy
+== IP Policy
 
-The Eclipse IP Policy is concerned with establishing practices to mitigate legal risks associated with building products based on Eclipse software.
+The Eclipse Intellectual Property Policy establishes principles for mitigation of legal risks associated with building products based on open source software.
 
 * Licensing
 * Copyright
@@ -35,18 +35,18 @@ This includes ensuring that the licenses on project code and third party content
 
 == Trademarks and Branding
 
-* The Eclipse Foundation holds all project trademarks on behalf of the community.
+* The Eclipse Foundation holds all project trademarks on behalf of the community
 ** Trademarks must be managed to remain valid
 * Cycle of value
 ** The Eclipse brand adds value to project trademarks
 ** Project trademarks add value to the Eclipse brand
 
-== Source Code is Core Content
+== Source Code is Core
 
-Source code must be actively developed on infrastructure provided by the Eclipse Foundation.
+All project source code ("project code") must be actively developed on infrastructure provided by the Eclipse Foundation.
 
-* Official project Git repositories must be the central authority
-* Committers must push regularly to official project repositories
+* Project repositories must be the central authority
+* Committers must push directly to project repositories
 * Test code is source code
 
 Level playing field; open to all comers.
@@ -58,9 +58,9 @@ Source code is core content. Eclipse Committers are expected to do their day-to-
 We need to avoid a situation where, for example, a project team commits behind a firewall and periodically “throws code over the wall”. It is impossible to contribute to a project if the available source code is not up-to-date. It is impossible to build a community around a project if the project team excludes the community from the development process.
 --
 
-== Documentation is Core Content
+== Documentation is Core
 
-Documentation is a first-class project resource
+Documentation is a first-class project resource.
 
 * Documentation maintained using the same rules as source code
 ** Must be deployed on EF infrastructure
@@ -79,9 +79,9 @@ It’s hard to very specifically state where to draw a line between project docu
 Core documentation must be made available via channels provided by the Eclipse Foundation, like a project website or as part of the distribution. Documentation may also be deployed elsewhere (subject, of course, to the terms of the applicable licenses).
 --
 
-== Issues/Bugs/Tickets are Core Content
+== Issues are Core
 
-Issues must be tracked using infrastructure provided by the Eclipse Foundation
+Issues/Bugs/Tickets must be tracked using infrastructure provided by the Eclipse Foundation
 
 * Bugzilla
 * GitHub Issues
@@ -95,12 +95,12 @@ Regardless of what we choose to call them, the issues associated with a project 
 Eclipse projects may use either our shared Bugzilla instance, or--for those projects that host their source code repositories in an Eclipse Foundation-managed GitHub organization--GitHub Issues.
 --
 
-== Project Dev List is Core Content
+== Dev List is Core
 
 The Project Dev list is the main means of contact between the Eclipse Foundation (staff and automatic services) and project team
 
 * Formal EF process must happen on the devlist
-**  practical: votes, etc.
+**  Votes, minutes, ...
 * Other project communication must be captured in a public channel
 
 [.notes]
@@ -134,17 +134,15 @@ Use of external services to represent non-core content is permitted without form
 
 == “The Keys” Must be Kept Safe
 
-Core infrastructure must be immune from domination by any single individual or organization.
-
 * The EF must hold the keys for core infrastructure
 ** Pick up and carry on
-
-Ownership of non-core infrastructure must be shared
-
+* Ownership of non-core infrastructure must be shared
 * Must be able to survive departures of team members
 
 [.notes]
 --
+Core infrastructure must be immune from domination by any single individual or organization.
+
 The Eclipse Foundation holds the keys on all core infrastructure. If a project team encounters trouble with core infrastructure, our dedicated IT services can help. 
 
 You’re on your own when you use external services. When it comes to external service providers, it’s important that a project team avoid a situation where a single individual holds all of the keys. Ownership of project-specific external services must be shared, and the means by which they are shared and the rules for becoming an owner must be well-defined and documented.

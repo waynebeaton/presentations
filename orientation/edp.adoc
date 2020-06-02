@@ -1,4 +1,6 @@
-== Eclipse Foundation Development Process
+== Development Process
+
+Eclipse Foundation Development Process (EDP)
 
 * Open source rules of engagement
 * Governance, structure, definitions, reviews
@@ -6,14 +8,11 @@
 
 Day-by-day development rules/process is defined by the project
 
-== Open Source Rules of Engagement
+== Rules of Engagement
 
-* Transparent
-** Public, and easily accessible
-* Open
-** Everyone participates with the same rules
-* Meritocratic
-** Earn your way in
+* Transparent: Public, and easily accessible
+* Open: Everyone participates with the same rules
+* Meritocratic: Earn your way in
 
 [.notes]
 --
@@ -48,19 +47,21 @@ Eclipse projects must be meritocratic. Project participants earn their way to ad
 * Be responsive when they do come
 ** “Kill with kindness”
 
-== Open Source Project Leadership
+== Project Leadership
 
 * Project lead(s)
-** Management, technical leadership
 ** Primary liaison with PMC and EMO
 * Project Management Committee (PMC)
-** Technical approval of IP contributions, releases
 ** Project oversight, general responsibility
-* EMO
+* Eclipse Management ORganizastion (EMO)
 ** Overall responsibility to manage processes and maintain services
-** Eclipse Foundation Staff, Architecture and Planning Councils
 
-== Who's Who
+[.notes]
+--
+The EMO is composed of the Eclipse Foundation Staff, Architecture and Planning Councils.
+--
+
+== Projects and Working Groups
 
 image::images/relationships.svg[]
 

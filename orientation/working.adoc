@@ -1,0 +1,66 @@
+== Committers and Contributors
+
+* Committers
+** Have write access to project resources (Git repos, downloads, etc.)
+** Must complete **committer** paperwork
+* Contributors
+** Contributions must be accepted by a committer
+** Must electronically sign the Eclipse Contributor Agreement (ECA)
+
+[.notes]
+--
+Note that committers do not have to sign the ECA. All committer agreements include the ECA, so all Eclipse committers automatically have the necessary agreements in place to contribute to other Eclipse projects.
+
+Committer status is assigned on a project-by-project basis. A committer on one project must separately demonstrate merit and be elected as a committer on other projects.
+--
+
+== Contributor Agreement
+
+* Developer’s Certificate of Origin
+** You have authored 100% of the content
+** You have the necessary rights
+** Provided under the project license(s)
+** Your contributions are public
+* Contributors must “sign-off” on each commit
+
+== Contributions via Git
+
+[source]
+----
+commit d6cf52411377a039fc2906378711091a26e932cb
+Author: Some Body <somebody@somewhere.com> <1>
+Date:   Wed May 29 16:17:36 2013 +0200
+    [123456] Hide unwanted common navigator action bar items <2>
+    
+    This change hides unwanted 'Link with Editor' and 
+    'Customize View...' items from the local toolbar and 
+    the view menu.
+        
+    Bug: https://bugs.eclipse.org/123456
+    Change-Id: Ia2bd5091303d1b0a738157effc24e4dac5a7d0c7 <3>
+    Also-by: Some Bodyelse <somebodyelse@nowhere.com> <4>
+    Signed-off-by: Some Body <somebody@somewhere.com> <5>
+----
+
+[.notes]
+--
+1. Author must be a project committer or a contributor who has signed the ECA.
+2. A number in braces will manifest as a link to a Bugzilla record (projects on git.eclipse.org only)
+3. Change-Id is used by Gerrit code review.
+4. Additional committers can be credited. Additional committers should also either be project committers or contributors who have signed the ECA.
+5. All commits by contributors must be "signed off" by the contributor. Not required for commits made by committers.
+
+Contributors must have an ECA. Commits from contributors must have a Signed-off-by footer that must contain the same credentials as the author. The "Signed-off-by" footer is an acknowledgement of the DCO.
+
+The hooks added to our Git repositories will validate this for you.
+--
+
+== Handling Git Contributions ==
+
+* Git/Gerrit will check for ECA/sign-off
+** GitHub will warn if ECA or sign-off is missing
+* Engage with IP Team if required, e.g.
+** Contribution has >1 KLOC
+** You’re not sure of the provenance
+** Not certain that the ECA/DCO terms are met
+

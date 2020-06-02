@@ -2,7 +2,9 @@
 :icons: font
 :customcss: ../resources/eclipse.css
 
-= The Eclipse Development Process for Committers
+= Committer Orientation
+
+The Eclipse Development Process for Committers
 
 Wayne Beaton +
 The Eclipse Foundation
@@ -24,3 +26,9 @@ include::eclipse.adoc[leveloffset=+1]
 == The Eclipse Foundation Development Process
 
 include::edp.adoc[leveloffset=+1]
+
+== Working as a Committer
+
+include::working.adoc[leveloffset=+1]
+
+== Questions?
