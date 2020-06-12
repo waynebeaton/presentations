@@ -8,9 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "CC-BY-4.0",
   "dependencies": {
     "@asciidoctor/reveal.js": "^4.0.1",
-    "asciidoctor": "^2.2.0"
+    "asciidoctor": "^2.2.0",
+    "decktape": "^3.0.0"
   }
 }

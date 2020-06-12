@@ -1,4 +1,7 @@
 :revealjs_theme: simple
+:revealjs_slideNumber: true
+:revealjs_hash: true
+:revealjs_center: false
 :icons: font
 :customcss: ../resources/eclipse.css
 
@@ -8,6 +11,11 @@ The Eclipse Development Process for Committers
 
 Wayne Beaton +
 The Eclipse Foundation
+
+== Notices
+
+* Copyright &copy; Eclipse Foundation, Inc.
+* Made available under the Creative Commons Attribution 4.0 International (CC-BY-4.0)
 
 == Agenda
 

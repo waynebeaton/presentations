@@ -31,15 +31,13 @@ Eclipse projects must be meritocratic. Project participants earn their way to ad
 * Open to all comers, including competitors!
 * Vendor neutral resources and services
 ** Project website
-** Issue tracker
-** Mailing lists and forums
-** Downloads
-** VCS/Git
+** Issue tracker, Mailing lists and forums
+** VCS/Git, Downloads
 * Committers must work in the open
 
 == Writing Code is Fun, But...
 
-* pen source rules of engagement
+* Open source rules of engagement
 ** Transparency, openness, meritocracy
 * Have project-specific diversity goals
 ** Building diversity takes work
