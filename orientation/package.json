@@ -12,6 +12,7 @@
   "dependencies": {
     "@asciidoctor/reveal.js": "^4.0.1",
     "asciidoctor": "^2.2.0",
+    "asciidoctor-kroki": "^0.8.2",
     "decktape": "^3.0.0"
   }
 }
