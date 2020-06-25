@@ -51,7 +51,7 @@ Eclipse projects must be meritocratic. Project participants earn their way to ad
 ** Primary liaison with PMC and EMO
 * Project Management Committee (PMC)
 ** Project oversight, general responsibility
-* Eclipse Management ORganizastion (EMO)
+* Eclipse Management Organization (EMO)
 ** Overall responsibility to manage processes and maintain services
 
 [.notes]
