@@ -1,0 +1,141 @@
+<!-- 
+Copyright (C) Eclipse Foundation, Inc. and others. 
+
+This program and the accompanying materials are made available under the terms of the 
+Eclipse Public License v. 2.0 which is available at http://www.eclipse.org/legal/epl-2.0. 
+
+SPDX-License-Identifier: EPL-2.0
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>Eclipse Foundation Project Handbook</name>
+	<organization>
+		<name>Eclipse Dash Project</name>
+	</organization>
+
+	<groupId>org.eclipse.dash</groupId>
+	<artifactId>org.eclipse.dash.orientation</artifactId>
+	<version>1.0MA</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<apache.tika.version>1.16</apache.tika.version>
+		<asciidoctor.maven.plugin.version>2.0.0-RC.1</asciidoctor.maven.plugin.version>
+		<asciidoctorj.version>2.0.0-RC.1</asciidoctorj.version>
+		<asciidoctorj.diagram.version>2.0.0-RC.1</asciidoctorj.diagram.version>
+		<jruby.version>9.2.7.0</jruby.version>
+	</properties>
+
+	<build>
+		<defaultGoal>process-resources</defaultGoal>
+		<plugins>
+			<plugin>
+				<groupId>org.asciidoctor</groupId>
+				<artifactId>asciidoctor-maven-plugin</artifactId>
+				<version>2.0.0</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.jruby</groupId>
+						<artifactId>jruby-complete</artifactId>
+						<version>${jruby.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.asciidoctor</groupId>
+						<artifactId>asciidoctorj</artifactId>
+						<version>2.3.0</version>
+					</dependency>
+					<dependency>
+						<groupId>org.asciidoctor</groupId>
+						<artifactId>asciidoctorj-diagram</artifactId>
+						<version>2.0.2</version>
+					</dependency>
+					<dependency>
+						<groupId>org.asciidoctor</groupId>
+						<artifactId>asciidoctorj-revealjs</artifactId>
+						<version>4.0.1</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<backend>revealjs</backend>
+					<sourceDirectory>.</sourceDirectory>
+					<requires>
+						<require>asciidoctor-revealjs</require>
+						<require>asciidoctor-diagram</require>
+					</requires>
+					<sourceHighlighter>coderay</sourceHighlighter>
+					<attributes>
+						<revealjsdir>
+							https://cdn.jsdelivr.net/npm/reveal.js@3.9.2
+						</revealjsdir>
+						<endpoint-url>http://www.eclipse.org</endpoint-url>
+						<project-version>${project.version}</project-version>
+						<imagesoutdir>.</imagesoutdir>
+						<imagesdir>.</imagesdir>
+						<data-uri />
+						<icons />
+						<sectanchors>true</sectanchors>
+						<idprefix />
+						<idseparator>-</idseparator>
+						<embedAssets>true</embedAssets>
+					</attributes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>asciidoc-to-revealjs</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>process-asciidoc</goal>
+						</goals>
+						<configuration>
+							<sourceDocumentName>orientation.adoc</sourceDocumentName>
+							<attributes>
+							</attributes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.asciidoctor
+										</groupId>
+										<artifactId>
+											asciidoctor-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.5.3,)
+										</versionRange>
+										<goals>
+											<goal>
+												process-asciidoc
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
