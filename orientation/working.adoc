@@ -64,7 +64,7 @@ Contributors must have an ECA. Commits from contributors must have a Signed-off-
 The hooks added to our Git repositories will validate this for you.
 --
 
-== Handling Git Contributions ==
+== Handling Git Contributions
 
 * Git/Gerrit will check for ECA/sign-off
 ** GitHub will warn if ECA or sign-off is missing
@@ -73,3 +73,173 @@ The hooks added to our Git repositories will validate this for you.
 ** You’re not sure of the provenance
 ** Not certain that the ECA/DCO terms are met
 
+== Intellectual Property
+
+The term intellectual property (IP) refers to any sort of creative work, be it literature, art, or software. In the realm of open source software, artifacts like source code, documentation, and images are considered intellectual property.
+
+== Copyright
+
+Unless otherwise stated, intellectual property is the property of its creator, who may grant permission for others to use that intellectual property by providing a license.
+
+== Contribution Questionnaire
+
+* CQs are required to track the due diligence review of
+** Contributions of project content
+** Use of third party content
+
+== CQ Workflow
+
+[graphviz, images/projectcode-cq, svg]
+----
+digraph {
+   graph [ranksep="0.25"; nodesep="0.25"; fontsize=24];
+   bgcolor=transparent;
+   rankdir=TB;
+   splines=curved;
+   
+   node [shape=box;style=filled;fillcolor=white;fontsize=24]
+   edge [fontsize=12]
+   
+   create [style="filled,bold",label="Create CQ"];
+   
+   {
+      attach [label="Attach code"];
+      rank=same; rankdir=LR;
+      pmc [label="PMC Approval"];
+      checkin [label="Check-in"];
+   }
+   
+   approval [style="filled,bold", label="Approved"]
+   
+   create -> attach;
+   attach -> pmc;
+   pmc -> checkin;
+   checkin -> approval;
+}
+----
+
+== Initial Contribution
+
+[graphviz, images/ip_ic_overview, svg, width=800px]
+----
+digraph {
+	graph [ranksep="0.25"; nodesep="0.25"; fontsize=24];
+	bgcolor=transparent;
+	rank=same;rankdir=LR
+	
+	node [shape=box;style=filled;fillcolor=white;fontsize=24];
+	{
+		rankdir=TB;
+		creation[label="EMO declares\nsuccessful\nCreation Review"];
+		provision[label="Eclipse\nWebmaster\nProvisions"];
+	}
+	initial[label="Committer submits\nInitial\nContribution"];
+	
+	{
+		rankdir=TB;
+		checkin[label="IP Team\ngrants\n\"check-in\""];
+		parallel[label="IP Team\ncompletes review"];
+		approval[label="IP Team\ngrants\n\"approval\""];
+	}
+	
+	{
+		rankdir=TB;
+		push[label="Committer\npushes to\nProject Git"];
+		develop[label="Committers and\ncontributors engage"];
+		review[label="Project Team\nengages in a\nRelease Review"];
+		release[label="First Release"; style="filled,bold"];
+	}
+	creation -> provision;
+	provision -> initial;
+	initial -> checkin;
+	checkin -> push;
+	checkin -> parallel;
+	parallel -> approval;
+	push -> develop;
+	develop -> review;
+	approval -> review;
+	review -> release;
+}
+----
+
+== Third-Party Content
+
+[graphviz, images/cq_thirdparty, svg]
+----
+digraph {
+	graph [ranksep="0.25"; nodesep="0.25"; fontsize="24"];
+	bgcolor=transparent;
+	rankdir=TB;
+	splines=curved;
+	
+	node [shape=box;style="filled";fillcolor="white";fontsize="24"];
+	edge [fontsize="12"];
+	
+	search [style="filled,bold",label="Search for\nExisting CQ"];
+	{
+		rank=same; rankdir=LR;
+		found[shape=diamond;label="Found?"];
+		create [label="Create CQ"];
+		attach [label="Attach code"];
+	}
+	
+	{
+		rank=same; rankdir=LR;
+		none [label="No CQ\nrequired"];
+		pmc [label="PMC Approval"];
+		checkin [label="Check-in"];
+		approval [label="License\nCertified"]
+	}
+	
+	approved [style="filled,bold",label="May be used by\nEclipse Project"];
+	
+	search -> found;
+	found -> none [label="Yes"; weight=1000];
+	none -> pmc [style=invis; weight=1000];
+	found -> create [xlabel="No"];
+	create -> attach;
+	attach -> pmc;
+	pmc -> checkin;
+	checkin -> approval;
+	
+	none -> approved;
+	approval -> approved;
+}
+----
+
+= Project Management Infrastructure
+
+== Project Metadata
+
+* Basic project information 
+* Historical information
+* Status and future looking information
+
+[.notes]
+--
+Project description and scope, the names of the project's mailing lists and forums, the bugzilla products, source code repositories, etc.
+
+Previous releases downloads, review feedback, and IP logs, etc.
+
+Features planned for the current release, dates.
+
+PMC members and the Eclipse Foundation staff also have the ability to make changes on behalf of a project.
+--
+
+== Create a CQ
+
+. Log in to the PMI;
+. Navigate to a project page;
+. Committer Tools > Intellectual Property > Create a Contribution Questionnaire
+. Follow the workflow.
+
+Any project committer create Contribution Questionnaire (CQ). 
+
+[.notes]
+--
+The CQ creation process works in two parts. 
+
+First you create the CQ, then (when required) you attach the source code. 
+
+You can attach the source code immediately after creating the CQ (otherwise the system will email you with instructions).
+--
