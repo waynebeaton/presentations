@@ -1,0 +1,12 @@
+.reveal section img {
+	border: none;
+	box-shadow: none;
+}
+
+xbody {
+	background-image: url('../images/eclipse_foundation_logo.svg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left bottom;
+	background-size: 25%;
+}

@@ -226,6 +226,10 @@ Features planned for the current release, dates.
 PMC members and the Eclipse Foundation staff also have the ability to make changes on behalf of a project.
 --
 
+== Committer Tools
+
+image::images/committer-tools.png[]
+
 == Create a CQ
 
 . Log in to the PMI;

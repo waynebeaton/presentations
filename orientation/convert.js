@@ -16,5 +16,5 @@ asciidoctorRevealjs.register()
 var registry = asciidoctor.Extensions.create()
 kroki.register(registry)
 // Convert the document 'presentation.adoc' using the reveal.js converter
-var options = { safe: 'safe', backend: 'revealjs' }
+var options = { safe: 'safe', backend: 'revealjs', base_dir: '/gitroot/presentations/orientation/' }
 asciidoctor.convertFile('orientation.adoc', options)

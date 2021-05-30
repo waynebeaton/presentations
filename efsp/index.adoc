@@ -1,0 +1,124 @@
+////
+ * Copyright (C) Eclipse Foundation, Inc. and others. 
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Creative Commons Attribution 4.0 International license which 
+ * is available at https://creativecommons.org/licenses/by/4.0/legalcode.
+ * 
+ * SPDX-License-Identifier: CC-BY-4.0
+////
+:revealjs_theme: simple
+:revealjs_slideNumber: true
+:revealjs_hash: true
+:revealjs_center: false
+:icons: font
+:customcss: ./eclipse.css
+
+= Open Source Specifications
+
+The Eclipse Foundation Specification Process
+
+Wayne Beaton +
+The Eclipse Foundation
+
+== Notices
+
+* Copyright &copy; Eclipse Foundation, Inc.
+* Made available under the Creative Commons Attribution 4.0 International (CC-BY-4.0)
+
+== Development Process
+
+[graphviz, images/edp, svg, width=800px]
+----
+digraph {
+	bgcolor=transparent;
+	rankdir=TB;
+	splines=ortho;
+	
+	node [shape=box,style=filled,fillcolor=white,fontsize=12];
+	{
+		start[shape=circle,label=""];
+		rank=same;rankdir=LR;
+		plan[label="Plan"];
+		development[label="Development"];
+		milestone[label="Milestone",style="filled,rounded"];
+	}
+	{
+		rank=same; rankdir=LR;
+		rc[label="Release\nCandidate",style="filled,rounded"];
+		release_review[label="Release\nReview"];
+		release[label="Release",style="filled,rounded"];
+	}
+	
+	start -> plan;
+	plan -> development [weight=1000];
+	development -> milestone[weight=1000];
+	milestone -> development[weight=1000];
+	development -> rc[weight=1000];
+	rc -> release_review ;
+	release_review -> release;
+	release -> plan;
+}
+----
+
+== Specification
+
+A collection of Application Programming Interface (API) definitions, descriptions of semantic behavior, data formats, protocols, and/or other referenced specifications, along with its TCK, intended to enable the development and testing of independent *Compatible Implementations*.
+
+== Essential Claims
+
+Basically... patents.
+
+Implementing something in open source is different from telling somebody to implement something.
+
+
+== Grants
+
+It's open source!
+
+* Anybody can grab the content at any time
+
+== Specification Process
+
+[graphviz, images/efsp, svg, width=800px]
+----
+digraph {
+	bgcolor=transparent;
+	rankdir=TB;
+	splines=ortho;
+	
+	node [shape=box,style=filled,fillcolor=white,fontsize=12];
+	{
+		rank=same;rankdir=LR;
+		start[shape=circle,label=""];
+		plan[label="Plan"];
+		plan_review[label="Plan\nReview"];
+		development[label="Development"];
+		milestone[label="Milestone",style="filled,rounded"];
+		progress_review[label="Progress\nReview"];
+	}
+	{
+		rank=same; rankdir=LR;
+		rc[label="Specification\nVersion",style="filled,rounded"];
+		release_review[label="Release\nReview"];
+		final[label="Ratified Final\nSpecification",style="filled,rounded"];
+	}
+	
+	start -> plan;
+	plan -> plan_review;
+	plan_review -> development [weight=1000];
+	development -> milestone[weight=1000];
+	milestone -> development[weight=1000];
+	milestone -> progress_review;
+	progress_review -> development;
+	development -> rc[weight=1000];
+	rc -> release_review ;
+	release_review -> final;
+	final -> plan;
+}
+----
+
+== Highlights
+
+* Essential Claims are "locked in" at review points
+* Essential Claims are granted only to implementers of a *Final Specification*

@@ -12,14 +12,14 @@ SPDX-License-Identifier: EPL-2.0
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<name>Eclipse Foundation Project Handbook</name>
+	<name>Eclipse Foundation Presentations</name>
 	<organization>
-		<name>Eclipse Dash Project</name>
+		<name>The Eclipse Foundation</name>
 	</organization>
 
-	<groupId>org.eclipse.dash</groupId>
-	<artifactId>org.eclipse.dash.orientation</artifactId>
-	<version>1.0MA</version>
+	<groupId>org.eclipse-foundation.presentations</groupId>
+	<artifactId>efsp</artifactId>
+	<version>0.7</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -81,7 +81,6 @@ SPDX-License-Identifier: EPL-2.0
 						<idprefix />
 						<idseparator>-</idseparator>
 						<embedAssets>true</embedAssets>
-						<stylesheet>../resources/eclipse.css</stylesheet>
 					</attributes>
 				</configuration>
 				<executions>
@@ -92,7 +91,7 @@ SPDX-License-Identifier: EPL-2.0
 							<goal>process-asciidoc</goal>
 						</goals>
 						<configuration>
-							<sourceDocumentName>orientation.adoc</sourceDocumentName>
+							<sourceDocumentName>index.adoc</sourceDocumentName>
 							<attributes>
 							</attributes>
 						</configuration>
